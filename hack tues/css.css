@@ -4,6 +4,7 @@ color: blue;
 position: center;
 }
 .paragraph{
+	margin: 9%;
 	padding-top: 3%;
 	color: rgb(89, 0, 255);
 	font-size: 23px;
@@ -142,7 +143,7 @@ a:hover {
 	font-family: 'Space Mono', monospace;
 	color : rgb(89,0,255);
 	font-size: 40px;
-	left:31%;
+	left:29%;
 }
 .text2{
 	position:fixed;
@@ -155,8 +156,8 @@ a:hover {
 .snimki{
 	width: 10%;
 	position: relative;
-	
-	left:3%;
+	padding-top: 0.6%;
+	left:2%;
 	border-radius: 50%;
 	box-shadow: 6px 6px rgb(52, 20, 110);
 }
@@ -164,7 +165,7 @@ a:hover {
 .boris{
     font-family: 'Syne Mono', monospace;
 	position:absolute;
-    top:60%;
+    top:115%;
 	left:15%;
 	font-size: 28px;
 	color : rgb(89,0,255);
@@ -172,9 +173,37 @@ a:hover {
 .toni{
 
 	position:absolute;
-	top:82%;
+	top:137%;
 	left:15%;
 	font-size: 28px;
 	color : rgb(89,0,255);
 }
+.toshko{
 
+	position:absolute;
+	top:161%;
+	left:15%;
+	font-size: 28px;
+	color : rgb(89,0,255);
+}
+.ivan{
+
+	position:absolute;
+	top:183%;
+	left:15%;
+	font-size: 28px;
+	color : rgb(89,0,255);
+}
+.stoqn{
+
+	position:absolute;
+	top:207%;
+	left:15%;
+	font-size: 28px;
+	color : rgb(89,0,255);
+}
+.aboutus1{
+	position:relative;
+	left: 70%;
+    color:rgb(89, 0, 255)
+}
