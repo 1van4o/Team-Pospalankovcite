@@ -1,0 +1,83 @@
+<html>
+    <head>
+        
+        <script>
+
+        function encryptText() {
+            let _text = document.getElementById("text").value;
+            console.log(_text);
+
+
+            fetch('http://localhost:8080/astronaut/message/encrypt', {
+                method: 'post',
+                body: JSON.stringify({
+                    text: _text
+                }),
+                headers: new Headers({'content-type': 'application/json'}),
+                }
+            )
+            .then( async (response) => {
+
+        // get json response here
+        let data = await response.json();
+        
+        if(response.status === 200){
+            console.log(data);
+
+            let encryptedMessageElement = document.getElementById("encryptedMessage");
+            
+
+            encryptedMessageElement.innerText = data["text"];
+        }
+
+
+      })
+    }
+
+
+    function decryptText() {
+            let _text = document.getElementById("text").value;
+            console.log(_text);
+
+
+            fetch('http://localhost:8080/astronaut/message/decrypt', {
+                method: 'post',
+                body: JSON.stringify({
+                    text: _text
+                }),
+                headers: new Headers({'content-type': 'application/json'}),
+                }
+            )
+            .then( async (response) => {
+
+        // get json response here
+        let data = await response.json();
+        
+        if(response.status === 200){
+            console.log(data);
+
+            let encryptedMessageElement = document.getElementById("encryptedMessage");
+            
+
+            encryptedMessageElement.innerText = data["text"];
+        }
+
+
+      })
+    }
+        </script>
+    </head>
+    <body>
+        <div id="encryptedMessage"></div>
+        <button onclick="encryptText()">Encrypt</button>
+        <button onclick="decryptText()">Decrypt</button>
+        <div id="student_form">
+            <div>
+                <div>
+                  <label for="text">Enter text: </label>
+                  <input name="text" id="text" value="">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
