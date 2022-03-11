@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypt/decrypt</title>
+    <link rel="stylesheet" href="ecrypt.css">
+    <style>
+        body  {
+            background: rgb(12, 1, 42);
+        }
+        </style> 
+         <script>
+
+            function encryptText() {
+                let _text = document.getElementById("text").value;
+                console.log(_text);
+    
+    
+                fetch('http://localhost:8080/astronaut/message/encrypt', {
+                    method: 'post',
+                    body: JSON.stringify({
+                        text: _text
+                    }),
+                    headers: new Headers({'content-type': 'application/json'}),
+                    }
+                )
+                .then( async (response) => {
+    
+            // get json response here
+            let data = await response.json();
+            
+            if(response.status === 200){
+                console.log(data);
+    
+                let encryptedMessageElement = document.getElementById("encryptedMessage");
+                
+    
+                encryptedMessageElement.innerText = data["text"];
+            }
+    
+    
+          })
+        }
+    
+    
+        function decryptText() {
+                let _text = document.getElementById("text").value;
+                console.log(_text);
+    
+    
+                fetch('http://localhost:8080/astronaut/message/decrypt', {
+                    method: 'post',
+                    body: JSON.stringify({
+                        text: _text
+                    }),
+                    headers: new Headers({'content-type': 'application/json'}),
+                    }
+                )
+                .then( async (response) => {
+    
+            // get json response here
+            let data = await response.json();
+            
+            if(response.status === 200){
+                console.log(data);
+    
+                let encryptedMessageElement = document.getElementById("encryptedMessage");
+                
+    
+                encryptedMessageElement.innerText = data["text"];
+            }
+    
+    
+          })
+        }
+            </script>
+</head>
+<body >
+    <div class="div">
+    <div id="encryptedMessage"style="color:white"></div>
+        <button onclick="encryptText()"class="Button">Encrypt</button>
+        <button onclick="decryptText()"class="Button">Decrypt</button>
+        <div id="student_form">
+            <div>
+                <div>
+                  <label for="text"style="color:white;font-size:20px"class="text">Enter text: </label>
+                  <input name="text" id="text" value=""class="text">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
