@@ -162,7 +162,7 @@ a:hover {
 	padding-top: 0.6%;
 	left:2%;
 	border-radius: 50%;
-	box-shadow: 6px 6px aqua;
+	box-shadow: 6px 6px rgb(98, 0, 255);
 }
 .tnas{
 	font-family: 'Syne Mono', monospace;
@@ -170,11 +170,11 @@ a:hover {
 	top:50px;
 	left:20%;
 	font-size: 38px;
-	color : aqua;	
+	color : rgb(98, 0, 255);	
 }
 .aboutus1{
 
-    color:aqua;
+    color:rgb(89, 0, 255);
 }
 #contactus{
     background-color: rgb(0, 17, 255);;
@@ -291,7 +291,7 @@ left: 25%;
 	}
 	.nie{
 		background-color: black;
-		width: 1000px;
+		width: 1675px;
 		height: 300px;
 		border: 2px solid rgb(127, 0, 246);
 		border-radius: 10px;
