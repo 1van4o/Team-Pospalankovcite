@@ -168,14 +168,15 @@ a:hover {
 	width: 10%;
 	position: relative;
 	padding-top: 0.6%;
-	left:2%;
+	left:0%;
+	top: 40px;
 	box-shadow: 6px 6px rgb(98, 0, 255);
 }
 .tnas{
 	font-family: 'Syne Mono', monospace;
 	position:absolute;
 	top:50px;
-	left:20%;
+	left:15%;
 	font-size: 38px;
 	color : rgb(98, 0, 255);	
 }
@@ -306,4 +307,13 @@ left: 25%;
 		position: relative;
 		left:50px;
 		top:270px;	
+	}
+	.imena{
+		font-family: 'Syne Mono', monospace;
+		position:absolute;
+		top:-50px;
+		left:20%;
+		font-size: 50px;
+		color : rgb(98, 0, 255);
+		
 	}
