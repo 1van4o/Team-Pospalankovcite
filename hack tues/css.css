@@ -4,8 +4,8 @@ color: blue;
 position: center;
 }
 .paragraph{
-	margin: 9%;
-	padding-top: 3%;
+	margin: 7%;
+	padding-top: 1%;
 	color: rgb(89, 0, 255);
 	font-size: 23px;
 }
@@ -35,7 +35,7 @@ position: center;
   body {
 	margin: 0;
 	padding: 0;
-	background: aqua;
+	background:color:rgb(0, 17, 255);
 	color: #333333;
 	font-family: "Roboto", sans-serif;
 	overflow-x: hidden;
@@ -121,7 +121,8 @@ a:hover {
 	padding: 50px;
 	padding-top: 125px;
 	right: -100px;
-	background: aqua;
+	background-color: rgb(98, 0, 255);
+	opacity: 100%;
 	list-style-type: none;
 	-webkit-font-smoothing: antialiased;
 	transform-origin: 0% 0%;
@@ -144,7 +145,8 @@ a:hover {
 	font-family: 'Space Mono', monospace;
 	color : rgb(89,0,255);
 	font-size: 40px;
-	left:29%;
+
+	text-align: center;
 }
 .text2{
 	position:fixed;
@@ -162,58 +164,20 @@ a:hover {
 	border-radius: 50%;
 	box-shadow: 6px 6px aqua;
 }
-
-.boris{
-    font-family: 'Syne Mono', monospace;
-	position:absolute;
-    top:120%;
-	left:15%;
-	font-size: 28px;
-	color : aqua;
-}
-.toni{
+.tnas{
 	font-family: 'Syne Mono', monospace;
 	position:absolute;
-	position:absolute;
-	top:141%;
-	left:15%;
-	font-size: 28px;
-	color : aqua;
-}
-.toshko{
-	font-family: 'Syne Mono', monospace;
-	position:absolute;
-	position:absolute;
-	top:163%;
-	left:15%;
-	font-size: 28px;
-	color : aqua;
-}
-.ivan{
-	font-family: 'Syne Mono', monospace;
-	position:absolute;
-	position:absolute;
-	top:185%;
-	left:15%;
-	font-size: 28px;
-	color : aqua;
-}
-.stoqn{
-	font-family: 'Syne Mono', monospace;
-	position:absolute;
-	position:absolute;
-	top:207%;
-	left:15%;
-	font-size: 28px;
-	color : aqua;
+	top:50px;
+	left:20%;
+	font-size: 38px;
+	color : aqua;	
 }
 .aboutus1{
-	position:relative;
-	left: 70%;
+
     color:aqua;
 }
 #contactus{
-    background-color: aqua;
+    background-color: rgb(0, 17, 255);;
 	height: 300px;
 }
 .submit{
@@ -299,4 +263,41 @@ left: 25%;
 		font-size:25px;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 		opacity: 100%;
+	}
+	.e_mails{
+		position:relative;
+		left: 3%;
+		color:rgb(89, 0, 255)
+	
+	}
+	.our_emails{
+		position:relative;
+		left: 3%;
+		color:rgb(89, 0, 255)
+
+
+	}
+	.div{
+		background-color: black;
+		width: 500px;
+		height: 200px;
+		border: 5px solid rgb(127, 0, 246);
+		border-radius: 10px;
+		padding: 50px;
+		margin: 20px;
+		position: relative;
+		left:650px;
+		top:270px;
+	}
+	.nie{
+		background-color: black;
+		width: 1000px;
+		height: 300px;
+		border: 2px solid rgb(127, 0, 246);
+		border-radius: 10px;
+		padding: 50px;
+		margin: 20px;
+		position: relative;
+		left:50px;
+		top:270px;	
 	}
