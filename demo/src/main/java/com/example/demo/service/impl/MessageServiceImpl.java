@@ -1,14 +1,10 @@
 package com.example.demo.service.impl;
 
-import com.example.demo.dto.MessageDto;
-import com.example.demo.entity.Message;
 import com.example.demo.service.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityManager;
-import javax.persistence.Query;
-import java.util.List;
 
 @Service
 public class MessageServiceImpl implements MessageService {
@@ -16,10 +12,11 @@ public class MessageServiceImpl implements MessageService {
     @Autowired
     private EntityManager entityManager;
 
+    public MessageServiceImpl(){
 
+    }
     @Override
-    public MessageDto encrypt(String text) {
-        MessageDto encrypted = new MessageDto();
+    public String encrypt(String text) {
         String encrypted_help = "";
         //for (int i = 0, j = 0; i < text.length(); i = i + 3, j++) encrypted_help += text.indexOf(i);
         for (int i = 0; i < text.length(); i++){
@@ -30,25 +27,19 @@ public class MessageServiceImpl implements MessageService {
             temp = (int) text.charAt(i) - 10;
             encrypted_help += Character.toString(temp);
         }
-        encrypted.setText(encrypted_help);
-        return encrypted;
+        return encrypted_help;
     }
 
     @Override
-    public MessageDto decrypt(String text) {
-        MessageDto decrypted = new MessageDto();
+    public String decrypt(String text)  {
         String decrypted_help = "";
 
         for (int i = 0; i < text.length(); i = i + 3){
             int temp = (int) text.charAt(i) - 15;
             decrypted_help += Character.toString(temp);
         }
-        decrypted.setText(decrypted_help);
-        return decrypted;
+        return decrypted_help;
+
     }
 
-    @Override
-    public List<MessageDto> save() {
-        return null;
-    }
 }
