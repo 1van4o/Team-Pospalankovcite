@@ -164,6 +164,13 @@ a:hover {
 	border-radius: 50%;
 	box-shadow: 6px 6px rgb(98, 0, 255);
 }
+.snimki1{
+	width: 10%;
+	position: relative;
+	padding-top: 0.6%;
+	left:2%;
+	box-shadow: 6px 6px rgb(98, 0, 255);
+}
 .tnas{
 	font-family: 'Syne Mono', monospace;
 	position:absolute;
@@ -271,8 +278,7 @@ left: 25%;
 	
 	}
 	.our_emails{
-		position:relative;
-		left: 3%;
+	
 		color:rgb(89, 0, 255)
 
 
