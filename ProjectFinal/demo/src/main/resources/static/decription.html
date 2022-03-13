@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypt/decrypt</title>
+    <link rel="stylesheet" href="decryption_style.css">
+        <style>
+
+        
+    body  {
+        background: rgb(12, 1, 42);
+    }
+</style>
+        <script>
+            function decrypt() {
+    
+                fetch('https://localhost:8443/astronaut/message/allDecrypted', {
+                    method: 'get',
+                    headers: new Headers({'content-type': 'application/json'}),
+                    }
+                )
+                .then( async (response) => {
+    
+            // get json response here
+            let data = await response.json();
+            
+            if(response.status === 200){
+                console.log(data);
+    
+                let encryptedMessageElement = document.getElementById("encryptedMessage");
+                
+                
+                for(let i = 0; i < data.length; i++){
+                    const node = document.createElement("p");
+                    const node2 = document.createElement("p");
+                    node.appendChild(document.createTextNode(data[i]["object"]));
+                    node2.appendChild(document.createTextNode(data[i]["description"]));
+                    // let textprint = data[i]["object"];
+                    // console.log(data[i]["object"]);
+                    // textprint += data[i]["description"] + "\n";
+                    encryptedMessageElement.appendChild(node);
+                    encryptedMessageElement.appendChild(node2);
+                    
+                }
+            }
+    
+    
+          })
+        }
+
+        function password(){
+            let pass = "afpRWdidihm~`echsUZ";
+            if(document.getElementById("text2").value === "afpRWdidihm~`echsUZ"){
+                console.log("yes");
+                console.log(document.getElementById("text2"));
+                decrypt();
+            }else console.log("Invalid key");
+        }
+        </script>
+    </head>
+
+    <body >
+    <div class="div">
+        <button onclick="password()"class="Button">Decrypt</button>
+        <div id="student_form">
+            <div>
+                <div>
+
+                  <label for="text2"style="color:white;font-size:20px"class="text">Enter key to decrypt: </label>
+                  <input type="password"name="text2" id="text2" value=""class="text">
+                </div>
+                <a href="encrypt.html"class="linkdecr">Go Back to Encrypter</a>
+            </div>
+        </div>
+    </div>
+    <div id="encryptedMessage"class="div1"style="color:white"></div>
+
+</body>
+</html>
